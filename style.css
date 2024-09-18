@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Barlow", system-ui;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.navigation {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 100%;
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+  font-family: "Playfair Display", system-ui;
+}
+.navigation ul {
+  display: flex;
+  margin-left: 50px;
+  width: 100%;
+}
+
+.navigation ul li {
+  margin: 0px 30px;
+  padding: 5px;
+  flex-shrink: 0;
+}
+
+.navigation .auth-button-group {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+.auth-sign {
+  margin: 0px 10px;
+}
+
+/* ************************ */
+/* section 1 banner */
+.banner {
+  position: relative;
+}
+
+.banner .banner-img {
+  width: 100%;
+  height: 500px;
+}
+.banner .banner-content {
+  position: absolute;
+  z-index: 2;
+  top: 20%;
+  margin-left: 40px;
+  background-color: white;
+  padding: 20px;
+  font-family: "Playfair Display", system-ui;
+  line-height: 1.5;
+}
+
+.banner-content h1 {
+  font-weight: 900;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+/* ************************* */
+/* section2 */
+.section2 {
+  margin-left: 20px;
+}
+.section2 h1 {
+  font-family: "Playfair Display", system-ui;
+  font-size: 30px;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+.section2-table-title ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+  font-weight: 700;
+}
+.section2-table-title li {
+  cursor: pointer;
+}
+
+.section2-table-content {
+  border: 1px solid gray;
+  padding: 50px;
+  margin: 20px 30px;
+}
+.section2-table-content h2 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.section2-table-cards {
+  display: flex;
+  justify-content: space-between;
+  overflow-x: auto;
+}
+
+.course-card {
+  min-width: 300px; /* flex-shrink: 0; */
+  border: 1px solid gray;
+  padding: 10px;
+  margin: 20px;
+}
+.course-card img {
+  width: 100%;
+  height: 150px;
+}
+.course-card h4 {
+  font-weight: 600;
+}
+/* ************************** */
+/* section 3 */
+
+.section3 h1 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .section3 .categories {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+@media (max-width: 960px) {
+  .section3 .categories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 1280px) {
+  .section3 .categories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: 1920px) {
+    .section3 .categories {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
