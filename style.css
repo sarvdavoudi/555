@@ -135,9 +135,10 @@ body {
 .section3 .categories {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 7px;
-  max-width: 1100px;
-  margin: 0 auto;
+  gap: 2px;
+  justify-items: center;
+  max-width: 1100px; 
+   margin: 0 auto;
 }
 
 /* medium devices */
@@ -156,7 +157,7 @@ body {
 }
 
 .category-card {
-  max-width: 250px;
+  width: 250px;
 }
 .category-card img {
   width: 100%;
@@ -187,6 +188,7 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  justify-items: start;
 }
 .footer-button button {
   display: flex;
