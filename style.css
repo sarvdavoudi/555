@@ -135,17 +135,19 @@ body {
 .section3 .categories {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2px;
+  gap: 7px;
   justify-items: center;
   max-width: 1100px; 
-   margin: 0 auto;
+  margin: 0 auto;
 }
 
+
+
 /* medium devices */
-@media (min-width: 768px) {
+@media (max-width: 768px) {
   .section3 .categories {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    /* gap: 15px; */
   }
 }
 /* small devices  */
@@ -157,7 +159,7 @@ body {
 }
 
 .category-card {
-  width: 250px;
+  width: 220px;
 }
 .category-card img {
   width: 100%;
