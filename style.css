@@ -1,6 +1,8 @@
-root {
+:root {
   --primaryColor: white;
-  --secondaryColor: rgb(0, 0, 0);
+  --secondaryColor: black;
+  --thirdColor: gray;
+  --forthColor: rgb(28, 29, 31);
 }
 
 * {
@@ -13,21 +15,18 @@ body {
 }
 
 .navigation {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-end;
-  width: 100%;
-  padding-bottom: 20px;
   font-family: "Playfair Display", system-ui;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 10px 0px;
 }
 .navigation img {
-  margin-bottom: 10px;
   margin-left: 10px;
 }
 .navigation ul {
   display: flex;
   margin-left: 50px;
-  padding: 8px;
   width: 100%;
 }
 
@@ -62,8 +61,8 @@ body {
   z-index: 2;
   top: 20%;
   margin-left: 40px;
-  background-color: white;
-  padding: 20px;
+  background-color: var(--primaryColor);
+  padding: 30px;
   font-family: "Playfair Display", system-ui;
   line-height: 1.5;
 }
@@ -96,7 +95,7 @@ body {
 }
 
 .section2-table-content {
-  border: 1px solid gray;
+  border: 1px solid var(--thirdColor);
   padding: 50px;
   margin: 20px 70px;
 }
@@ -113,7 +112,7 @@ body {
 
 .course-card {
   min-width: 300px; /* flex-shrink: 0; */
-  border: 1px solid gray;
+  border: 1px solid var(--thirdColor);
   padding: 10px;
   margin: 20px;
 }
@@ -133,7 +132,6 @@ body {
   margin-bottom: 20px;
   margin-left: 120px;
 }
-
 .section3 .categories {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -141,25 +139,15 @@ body {
   max-width: 1100px;
   margin: 0 auto;
 }
-@media (max-width: 1920px) {
-  .section3 .categories {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
 
-@media (max-width: 1280px) {
-  .section3 .categories {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (max-width: 960px) {
+/* medium devices */
+@media (min-width: 768px) {
   .section3 .categories {
     grid-template-columns: repeat(4, 1fr);
     gap: 15px;
   }
 }
-
+/* small devices  */
 @media (max-width: 600px) {
   .section3 .categories {
     display: grid;
@@ -185,8 +173,8 @@ body {
 /* ***************************** */
 /* footer */
 .footer-container {
-  background-color: rgb(28, 29, 31);
-  color: white;
+  background-color: var(--forthColor);
+  color: var(--primaryColor);
   margin-top: 20px;
 }
 .footer-section1 {
@@ -204,11 +192,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(28, 29, 31);
-  border: 1px solid white;
-  color: white;
+  background-color: var(--forthColor);
+  border: 1px solid var(--primaryColor);
+  color: var(--primaryColor);
   padding: 10px 30px;
-  cursor: pointer;
   font-weight: 600;
 }
 
@@ -224,15 +211,15 @@ body {
 /* general */
 .btn.btn-primary {
   background-color: var(--primaryColor);
-  border: 1px solid black;
+  border: 1px solid var(--secondaryColor);
   padding: 8px 20px;
   font-weight: 600;
-  cursor: pointer;
   color: var(--secondaryColor);
   border-radius: 5px;
   margin: 5px 10px;
 }
 .btn.btn-primary:hover {
-  background-color: black;
-  color: white;
+  background-color: var(--secondaryColor);
+  color: var(--primaryColor);
+  cursor: pointer;
 }
