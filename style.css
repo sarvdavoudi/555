@@ -129,7 +129,7 @@ body {
 /* ************************** */
 /* section 3 */
 .section3 {
-  width: 100%;
+  max-width: 1600px;
   margin: 0 auto;
 }
 .section3 h1 {
